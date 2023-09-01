@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advanced Selector | Cinema</title>
+    <style>
+      body {
+        background-color: #333;
+        color: white;
+        font-family: Arial;
+      }
+      .cinema {
+        border: 1px dotted red;
+        text-align: center;
+        height: 600px;
+      }
+      .cinema .vip span {
+        background-image: url(img/chair-yelow.png);
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        vertical-align: top;
+      }
+      .cinema .main span {
+        background-image: url(img/chair-red.png);
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        vertical-align: top;
+      }
+      .cinema .front span {
+        background-image: url(img/chair-red.png);
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+      }
+      /*------HW 1 & 2--------------------------------------------*/
+      .vip-left {
+        margin-left: -360px;
+      }
+      .vip-right {
+        transform: translateX(118px) translateY(-74px);
+      }
+      .vip-right::before {
+        content: url(img/el.png);
+        transform: translateX(65px) translateY(15px);
+        display: inline-block;
+      }
+      .main-left {
+        margin-top: -70px;
+        transform: translateX(-180px) translateY(0px);
+      }
+      .main-right-top {
+        transform: translateX(180px) translateY(-72px);
+      }
+      .main-right-middle {
+        transform: translateX(154px) translateY(-72px);
+      }
+      .main-right-bottom {
+        transform: translateX(180px) translateY(-72px);
+      }
+      .main-right-middle::before {
+        content: url(img/ea.png);
+        transform: translateX(65px) translateY(15px);
+        display: inline-block;
+      }
+      .front-left {
+        transform: translateX(-144px) translateY(-80px);
+      }
+      .front-right {
+        transform: translateX(109px) translateY(-152px);
+      }
+      .name2 {
+        transform: translateY(-70px);
+      }
+      .name3 {
+        transform: translateY(-70px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Advanced Selector <br />
+      Cinema
+    </h1>
+
+    <div class="cinema">
+      <div class="vip">
+        <h2 class="name1">VIP</h2>
+        <div class="row">
+          <div class="vip-left">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+          </div>
+          <div class="vip-right">
+            <span>5</span><span>6</span><span>7</span>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h2 class="name2">Main</h2>
+        <div class="row">
+          <div class="main-left">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+          </div>
+          <div class="main-right-top">
+            <span class="img">5</span><span>6</span><span>7</span><span>8</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="main-left">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+          </div>
+          <div class="main-right-middle">
+            <span>5</span><span>6</span><span>7</span><span>8</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="main-left">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+          </div>
+          <div class="main-right-bottom">
+            <span>5</span><span>6</span><span>7</span><span>8</span>
+          </div>
+        </div>
+      </div>
+      <div class="front">
+        <h2 class="name3">Front</h2>
+        <div class="row">
+          <div class="front-left">
+            <span>1</span><span>2</span><span>3</span>
+          </div>
+          <div class="front-right"><span>4</span><span>5</span></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
